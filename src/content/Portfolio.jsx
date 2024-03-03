@@ -14,7 +14,7 @@ export const Portfolio = () => {
     })
 
     return (<>
-        <div className="flex flex-col space-y-10 w-2/3 max-xl:w-full h-[50rem] rounded-xl backdrop-blur border border-slate-800 p-10">
+        <div className="flex flex-col space-y-10 w-2/3 max-xl:w-full h-[50rem] rounded-xl backdrop-blur border-slate-800 p-10">
             <h1 className="oxx-title text-center text-white text-5xl font-thin">
                 Portfolio
             </h1>
