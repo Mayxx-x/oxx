@@ -20,7 +20,7 @@ export const Portfolio = () => {
             </h1>
 
             {/* Grid View mostrando os Projetos salvos */}
-            <section className="grid grid-cols-2 grid-rows-2 gap-10 w-full h-full max-[1800px]:grid-cols-1 max-sm:p-1 border-slate-600 rounded p-10">
+            <section className="grid grid-cols-2 grid-rows-2 gap-10 w-full h-full max-[1800px]:grid-cols-1 max-[1800px]:grid-rows-none max-sm:p-1 border-slate-600 rounded p-10">
                 {data?.length > 0 && data.map((project) => (
                     <div key={project.id}
                         onClick={() => { window.open(`${project?.link}`, '_blank') }}
