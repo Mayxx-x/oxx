@@ -38,7 +38,7 @@ export const Portfolio = () => {
                         <div className="absolute inset-0 grid items-end justify-center text-white p-4 font-thin bg-gradient-to-tr ">
                             <h1 className="oxx-title text-3xl max-sm:text-xl bg-transparent p-3 rounded-xl">{project?.title}</h1>
                             <Separator />
-                            <p className="self-center font-normal bg-[#0001] p-3 rounded-xl backdrop-blur-lg">{project?.description}</p>
+                            <p className="self-center font-normal bg-[#0001] p-3 rounded-xl backdrop-blur-lg max-sm:text-sm">{project?.description}</p>
                         </div>
                     </div>
                 ))}
