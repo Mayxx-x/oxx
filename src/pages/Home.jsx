@@ -1,5 +1,6 @@
 import { MainHeader } from "../content/MainHeader"
 import { Portfolio } from "../content/Portfolio"
+import { Separator } from "@/components/ui/separator"
 
 export default function Home() {
     return (<>
@@ -11,11 +12,73 @@ export default function Home() {
 
                 {/* Segundo Cabeçalho */}
                 <div className="oxx-header w-11/12 max-xl:w-full rounded-full bg-[url('/luxurious_spaceship.jpg')] bg-center backdrop-blur max-sm:h-[10rem] sm:h-[15rem] xl:h-[20rem] 2xl:h-[30rem] shadow-[inset_0_0_1rem_#000]">
-                    <figure className="bg-[url('/products_banner.png')] bg-cover min-h-full min-w-full rounded-full"></figure>
+                    <figure className="bg-[url('/products_banner.png')] bg-cover min-h-full min-w-full rounded-full "></figure>
                 </div>
 
                 {/* Conteudo Principal da Pagina */}
                 <Portfolio />
+
+                {/* Sessao de Produtos */}
+                <section className="max-xl:px-5">
+                    <figure className="products-section-title">
+                        <header className="flex items-center text-white whitespace-nowrap space-x-5 max-sm:space-x-2">
+                            {/* Header Title with Icon */}
+                            <span className="w-">
+                                {/* <svg className="h-10 aspect-square" data-slot="icon" fill="none" stroke-width="1.5" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M2.25 7.125C2.25 6.504 2.754 6 3.375 6h6c.621 0 1.125.504 1.125 1.125v3.75c0 .621-.504 1.125-1.125 1.125h-6a1.125 1.125 0 0 1-1.125-1.125v-3.75ZM14.25 8.625c0-.621.504-1.125 1.125-1.125h5.25c.621 0 1.125.504 1.125 1.125v8.25c0 .621-.504 1.125-1.125 1.125h-5.25a1.125 1.125 0 0 1-1.125-1.125v-8.25ZM3.75 16.125c0-.621.504-1.125 1.125-1.125h5.25c.621 0 1.125.504 1.125 1.125v2.25c0 .621-.504 1.125-1.125 1.125h-5.25a1.125 1.125 0 0 1-1.125-1.125v-2.25Z"></path>
+                                </svg> */}
+                            </span>
+
+                            <h1 className="oxx-title text-white font-thin text-4xl"> Produtos </h1>
+
+                            {/* <marquee className="overflow-x-scroll self-end">
+                                Alcance excelência online com a OXX! Desenvolvedores full stack prontos para dar vida à sua visão digital. Invista em qualidade para o seu negócio agora!
+                            </marquee> */}
+                        </header>
+
+                        <Separator />
+                        {/* Content */}
+                        <p className='products-heading text-center mx-auto max-sm:w-11/12'>
+                            Alcance excelência online com a OXX! Desenvolvedores full stack prontos para dar vida à sua visão digital. Invista em qualidade para o seu negócio agora!
+                        </p>
+                    </figure>
+                </section>
+
+                {/* Contact section */}
+                <section className="w-11/12 text-white font-thin text-sm text-center">
+                    <br />
+                    <a target="_blank" href="https://wa.me/5511949164181" className='flex justify-center items-center border-none p-3 space-x-3 h-20 text-3xl hover:text-fuchsia-300 fill-white hover:fill-fuchsia-300 transition-all'>
+                        <span className="h-10 ">
+                            <svg  height="100%" width="100%" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                                viewBox="0 0 308 308" xml:space="preserve">
+                                <g id="XMLID_468_">
+                                    <path id="XMLID_469_" d="M227.904,176.981c-0.6-0.288-23.054-11.345-27.044-12.781c-1.629-0.585-3.374-1.156-5.23-1.156
+                                            c-3.032,0-5.579,1.511-7.563,4.479c-2.243,3.334-9.033,11.271-11.131,13.642c-0.274,0.313-0.648,0.687-0.872,0.687
+                                            c-0.201,0-3.676-1.431-4.728-1.888c-24.087-10.463-42.37-35.624-44.877-39.867c-0.358-0.61-0.373-0.887-0.376-0.887
+                                            c0.088-0.323,0.898-1.135,1.316-1.554c1.223-1.21,2.548-2.805,3.83-4.348c0.607-0.731,1.215-1.463,1.812-2.153
+                                            c1.86-2.164,2.688-3.844,3.648-5.79l0.503-1.011c2.344-4.657,0.342-8.587-0.305-9.856c-0.531-1.062-10.012-23.944-11.02-26.348
+                                            c-2.424-5.801-5.627-8.502-10.078-8.502c-0.413,0,0,0-1.732,0.073c-2.109,0.089-13.594,1.601-18.672,4.802
+                                            c-5.385,3.395-14.495,14.217-14.495,33.249c0,17.129,10.87,33.302,15.537,39.453c0.116,0.155,0.329,0.47,0.638,0.922
+                                            c17.873,26.102,40.154,45.446,62.741,54.469c21.745,8.686,32.042,9.69,37.896,9.69c0.001,0,0.001,0,0.001,0
+                                            c2.46,0,4.429-0.193,6.166-0.364l1.102-0.105c7.512-0.666,24.02-9.22,27.775-19.655c2.958-8.219,3.738-17.199,1.77-20.458
+                                            C233.168,179.508,230.845,178.393,227.904,176.981z"/>
+                                    <path id="XMLID_470_" d="M156.734,0C73.318,0,5.454,67.354,5.454,150.143c0,26.777,7.166,52.988,20.741,75.928L0.212,302.716
+                                            c-0.484,1.429-0.124,3.009,0.933,4.085C1.908,307.58,2.943,308,4,308c0.405,0,0.813-0.061,1.211-0.188l79.92-25.396
+                                            c21.87,11.685,46.588,17.853,71.604,17.853C240.143,300.27,308,232.923,308,150.143C308,67.354,240.143,0,156.734,0z
+                                            M156.734,268.994c-23.539,0-46.338-6.797-65.936-19.657c-0.659-0.433-1.424-0.655-2.194-0.655c-0.407,0-0.815,0.062-1.212,0.188
+                                            l-40.035,12.726l12.924-38.129c0.418-1.234,0.209-2.595-0.561-3.647c-14.924-20.392-22.813-44.485-22.813-69.677
+                                            c0-65.543,53.754-118.867,119.826-118.867c66.064,0,119.812,53.324,119.812,118.867
+                                            C276.546,215.678,222.799,268.994,156.734,268.994z"/>
+                                </g>
+                            </svg>
+                        </span>
+                        <p>Contato</p>
+                    </a>
+                        <p className="">
+                        Entre em contato conosco hoje mesmo para saber mais sobre como nossos
+                        desenvolvedores podem ajudar sua empresa a crescer.
+                    </p>
+                </section>
 
                 {/* Footer Princial */}
                 <footer className="border min-w-screen w-full h-20 border-slate-800">
