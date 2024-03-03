@@ -1,0 +1,20 @@
+<svg width="1460" height="1520" viewBox="0 0 1460 1520" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M1154.54 247.927C1150 213.539 1144.26 162.659 1098.18 131.345C992.717 59.6723 828.184 218.222 762.073 287.809C558.914 501.65 400.545 780.861 327.448 1067.08C305.416 1153.34 266.585 1333.09 364.06 1389.89C459.413 1445.45 587.592 1334.45 651.964 1273.87C856.469 1081.4 1010.77 823.017 1102 558.721C1135.33 462.129 1168.2 351.302 1154.54 247.927Z" stroke="url(#paint0_linear_59_44)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M1385.21 871.739C1412.72 850.612 1453.91 820.195 1457.99 764.636C1467.33 637.466 1247.76 574.251 1154.44 551.791C867.665 482.77 546.676 485.224 262.258 565.027C176.534 589.08 1.44997 645.326 1.0009 758.14C0.561604 868.499 160.778 924.006 245.429 949.463C514.361 1030.34 815.282 1034.78 1089.78 981.628C1190.1 962.205 1302.51 935.251 1385.21 871.739Z" stroke="url(#paint1_linear_59_44)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M498.973 135.783C466.922 122.523 419.985 102.059 369.829 126.306C255.027 181.802 310.068 403.567 337.277 495.614C420.889 778.475 583.509 1055.23 794.829 1261.64C858.522 1323.86 994.774 1447.36 1092.7 1391.34C1188.49 1336.54 1156.45 1170.04 1136.17 1084C1071.75 810.662 925.131 547.838 741.855 336.688C674.873 259.521 595.326 175.647 498.973 135.783Z" stroke="url(#paint2_radial_59_44)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<defs>
+<linearGradient id="paint0_linear_59_44" x1="690.663" y1="436.471" x2="1054.15" y2="684.257" gradientUnits="userSpaceOnUse">
+<stop stop-color="#9F1111"/>
+<stop offset="1" stop-color="#D11190"/>
+</linearGradient>
+<linearGradient id="paint1_linear_59_44" x1="291.339" y1="603.368" x2="396.801" y2="988.358" gradientUnits="userSpaceOnUse">
+<stop stop-color="#810E0E"/>
+<stop offset="1" stop-color="#D11190"/>
+</linearGradient>
+<radialGradient id="paint2_radial_59_44" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(483.834 145.68) rotate(65.9197) scale(1415.35 1321.74)">
+<stop stop-color="#CFCFCF" stop-opacity="0.76"/>
+<stop offset="0.0001" stop-color="#810E0E"/>
+<stop offset="1" stop-color="#D11190"/>
+</radialGradient>
+</defs>
+</svg>

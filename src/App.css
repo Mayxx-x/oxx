@@ -1,0 +1,25 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap');
+
+* {
+    font-family: 'Quicksand', sans-serif;
+}
+
+.oxx-header {
+    animation: showcase linear infinite 60s;
+}
+
+.oxx-title {
+    text-shadow: 0 0 1rem #fff;
+}
+
+@keyframes showcase {
+    0% {
+        background-position: bottom;
+    }
+    50% {
+        background-position: top;
+    }
+    100% {
+        background-position: bottom;
+    }
+}
