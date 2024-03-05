@@ -20,7 +20,7 @@ export const TermsAndConditions = ({ children }) => {
                         Última Atualização: 23/11/2023
                     </DialogDescription>
                 </DialogHeader>
-                <div className="min-h-[30rem] max-h-[50rem] max-sm:max-h-[30rem]">
+                <div className="min-h-[30rem] max-h-[50rem] max-sm:max-h-[30rem] max-xl:max-h-[35rem]">
                     <section className="w-full h-full justify-items-center overflow-y-scroll shadow-[inset_0_0_1rem_#000]">
                         <article className="w-full text-center px-3 leading-7">
                             <p className="">

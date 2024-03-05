@@ -15,9 +15,11 @@ export const Portfolio = () => {
 
     return (<>
         <div className="flex flex-col space-y-10 w-2/3 max-xl:w-full min-h-[50rem] rounded-xl border backdrop-blur border-slate-800 p-10">
-            <h1 className="oxx-title text-center text-white text-5xl font-thin">
-                Portfolio
-            </h1>
+            <header className="">
+                <h1 className="oxx-title text-center text-white text-5xl font-thin">
+                    Portfolio
+                </h1>
+            </header>
 
             {/* Grid View mostrando os Projetos salvos */}
             <section className="grid grid-cols-2 grid-rows-2 gap-10 w-full h-auto min-h-full max-[1800px]:grid-cols-1 max-[1800px]:grid-rows-none max-sm:p-1 border-slate-600 rounded p-10">
@@ -40,7 +42,7 @@ export const Portfolio = () => {
                             <h1 className="oxx-title text-3xl max-sm:text-xl bg-transparent p-3 rounded-xl">{project?.title}</h1>
                             <Separator />
                             {/* Descrição do Projeto */}
-                            <p className="self-center font-normal bg-[#0005] p-3 rounded-xl backdrop-blur-lg max-sm:text-sm">{project?.description}</p>
+                            <p className="self-center font-normal bg-[#0005] p-3 rounded-xl backdrop-blur-sm max-sm:text-sm">{project?.description}</p>
                         </div>
                     </div>
                 ))}
@@ -51,6 +53,10 @@ export const Portfolio = () => {
                     </div>
                 )}
             </section>
+
+            <footer className="">
+                <p className="text-center text-slate-600"> "A criatividade é a inteligência se divertindo." - Albert Einstein </p>
+            </footer>
         </div>
     </>)
 }

@@ -16,7 +16,7 @@ export const MainHeader = () => {
     }
 
     return (<>
-        <header className="h-20 flex justify-center gap-x-10 items-center border border-slate-800 text-white">
+        <header className="h-20 flex justify-center gap-x-10 max-sm:gap-x-1 items-center border border-slate-800 text-white">
 
             {/* Trigger do modal de contato */}
             <div className="cursor-pointer hover:bg-[#4a4aa838]">
@@ -34,7 +34,7 @@ export const MainHeader = () => {
 
             <Popover className='h-full p-1'>
                 <PopoverTrigger>
-                    <img src="/oxx_logo.png" alt="" className="h-20 p-3 hover:bg-[#363669] rounded-xl" />
+                    <img src="/oxx_logo.png" alt="" className="h-20 p-3 hover:bg-[#363669] rounded-xl aspect-square" />
                 </PopoverTrigger>
 
                 <PopoverContent className='bg-[#0e0e1ba8] border-none text-white backdrop-blur'>
