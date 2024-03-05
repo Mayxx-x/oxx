@@ -32,7 +32,7 @@ export const Products = () => {
             </figure>
 
             {/* Container de Produtos OXX */}
-            <article className="w-full grid grid-cols-2 gap-5 p-10 max-lg:grid-rows- text-white
+            <article className="w-full grid grid-cols-2 gap-5 p-10 max-sm:p-1 max-lg:grid-rows- text-white
                 [&>*]:border [&>*]:border-slate-800 [&>*]:cursor-pointer"
             >
                 {/* Sessao Sites e Aplicativos */}
