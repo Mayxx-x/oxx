@@ -36,7 +36,7 @@ export const Products = () => {
                 [&>*]:border [&>*]:border-slate-800 [&>*]:cursor-pointer"
             >
                 {/* Sessao | Produtos | Sites e Aplicativos */}
-                <div className={`w-full col-span-2 text-xl h-[auto] bg-gradient-to-r from-[#0e0e1b] to-[#101020] rounded-lg transition-all ${productClass} bg-[url('earth_by_nasa.jpg')] bg-cover bg-center `}>
+                <div className={`w-full col-span-2 text-xl h-[auto] bg-gradient-to-r from-[#0e0e1b] to-[#101020] rounded-lg transition-all ${productClass} bg-[url('/earth_by_nasa.jpg')] bg-cover bg-center `}>
 
                     <div className="backdrop-blur p-5 rounded-lg bg-[#0e0e1b8a]">
                         <h1 className="text-3xl oxx-title"> Sites e Aplicativos </h1>
