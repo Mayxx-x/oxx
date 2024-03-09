@@ -35,8 +35,8 @@ export const Products = () => {
             <article className="w-full grid grid-cols-2 gap-5 p-10 max-sm:p-1 max-lg:grid-rows- text-white
                 [&>*]:border [&>*]:border-slate-800 [&>*]:cursor-pointer"
             >
-                {/* Sessao Sites e Aplicativos */}
-                <div className={`w-full col-span-2 text-xl h-[auto] bg-gradient-to-r from-[#0e0e1b] to-[#101020] rounded-lg transition-all ${productClass} bg-[url('https://ddgimgs-f43e.kxcdn.com/1758762/tmpqqk_9ac63beb657321b4507d45fa0de34b7750d547b7.jpg')] bg-cover bg-bottom `}>
+                {/* Sessao | Produtos | Sites e Aplicativos */}
+                <div className={`w-full col-span-2 text-xl h-[auto] bg-gradient-to-r from-[#0e0e1b] to-[#101020] rounded-lg transition-all ${productClass} bg-[url('earth_by_nasa.jpg')] bg-cover bg-center `}>
 
                     <div className="backdrop-blur p-5 rounded-lg bg-[#0e0e1b8a]">
                         <h1 className="text-3xl oxx-title"> Sites e Aplicativos </h1>
