@@ -36,9 +36,9 @@ export const Products = () => {
                 [&>*]:border [&>*]:border-slate-800 [&>*]:cursor-pointer"
             >
                 {/* Sessao | Produtos | Sites e Aplicativos */}
-                <div className={`w-full col-span-2 text-xl h-[auto] bg-gradient-to-r from-[#0e0e1b] to-[#101020] rounded-lg transition-all ${productClass} bg-[url('/earth_by_nasa.jpg')] bg-cover bg-center `}>
+                <div className={`w-full col-span-2 text-xl h-[auto] bg-gradient-to-r from-[#0e0e1b] to-[#101020] rounded-lg transition-all ${productClass} bg-[url('/earth_by_nasa.jpg')]  bg-cover bg-center `}>
 
-                    <div className="backdrop-blur p-5 rounded-lg bg-[#0e0e1b8a]">
+                    <div className="backdrop-blur-sm hover:backdrop-blur-xl transition-all duration-500 p-5 rounded-lg bg-[#0e0e1b8a]">
                         <h1 className="text-3xl oxx-title"> Sites e Aplicativos </h1>
 
 
@@ -56,9 +56,9 @@ export const Products = () => {
                 </div>
                 {/*  */}
                 <div className={`col-span-1 max-lg:col-span-full bg-[url("https://neural.love/cdn/ai-photostock/1eeb78ae-4e6d-6748-b09c-59515bde4ae0/0.jpg?Expires=1714521599&Signature=5avugxxrSW-DxnXBbB1Ia33UAZ4Cm~HvaSzazeS4bkuN1bwufzzjZraUDu~ybzxK9z9fVYqYJwidVUCTTx53AvjUfNZHMwxDzUMSuTkXCYDHfjCQalMoz4230R5cY--pK5iEFl-4S4W-DmDaICmhQG5Z4524-emA0pt8U33-CSCHb7Lc7-kfzXxuckA102eNJdhuFETfQhqjbm1GufT~VaIUZZjLJ~h519FHhPzE2bPmjVMp7rvoQFEXb61gHRa-NgR22-BLkejesk6WuzdmZEY553eykyS9gwY1zYR9o~OQEMSXQaXeIBJF7PUwNGZJIGcfgbO1M6mXyR55hjMnsA__&Key-Pair-Id=K2RFTOXRBNSROX")] h-[auto] bg-cover rounded-lg ${productClass}`}>
-                    <div className="backdrop-blur h-full p-5 rounded-lg bg-[#0e0e1b8a]">
+                    <div className="backdrop-blur hover:backdrop-blur-xl transition-all duration-500 h-full p-5 rounded-lg bg-[#0e0e1b8a]">
 
-                        <h1 className="text-2xl oxx-title"> Sistemas Corporativos </h1>
+                        <h1 className="text-2xl oxx-title group:hover:text-md"> Sistemas Corporativos </h1>
 
                         <ul className="max-md:grid-cols-1 p-5 text-[10pt] gap-3 grid grid-cols-2 grid-rows-4 list-disc justify-center">
                             <li>Integração de Processos Empresariais</li>
@@ -74,7 +74,7 @@ export const Products = () => {
                 </div>
                 {/* Inovações Tecnologias */}
                 <div className={`col-span-1 max-lg:col-span-full h-[auto] bg-[url("https://neural.love/cdn/ai-photostock/1eec129d-3b8f-66ec-b965-7f077b440cc3/0.jpg?Expires=1714521599&Signature=FAwfU4paxA7v8dfZtIOmy33DfUfBLDFoZKlW4aA-lzok8MMGQF8jFOyjbvIYmRKLx-ZIYEuNmExEdsqCPQdHZiX4BUZ3YWm-d2uyzj5rDLdtf1wrzokKCrB7WWPGZjGlf7D7MjoeDGpPZZq0D6XHuVv57SPsx-buLC5O9XINcmd0yDrjV04eLdJgHHjd4cpv1A-e7SMzpt26PRg~VJ4e7PkdZ9h7vj4p863fhtaV7hmigOH-nhbRoRwPgluDCdyNWdv33IwbUUzg9xGqw6qZpZIUEjzu7EfThSv~ZokINxdvomQw~y8fKsFfWIzexotEU6CL1VNoaw~jKfPhgD7lbw__&Key-Pair-Id=K2RFTOXRBNSROX")] ${productClass}`}>
-                    <div className="backdrop-blur h-full p-5 rounded-lg bg-[#0e0e1b8a]">
+                    <div className="backdrop-blur hover:backdrop-blur-xl transition-all duration-500 h-full p-5 rounded-lg bg-[#0e0e1b8a]">
 
                         <h1 className="text-2xl oxx-title"> Inovações Tecnologias </h1>
 
