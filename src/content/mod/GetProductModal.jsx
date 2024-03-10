@@ -36,12 +36,12 @@ export const GetProductModal = () => {
             Contratação de Serviçoes Digitais:
           </DialogTitle>
           <DialogDescription>
-            
+            Sites e Aplicativos: 
           </DialogDescription>
         </DialogHeader>
 
-        <article className="border">
-
+        <article className="border min-h-[10rem] rounded-lg">
+          
         </article>
       </DialogContent>
     </Dialog>
