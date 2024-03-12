@@ -1,3 +1,6 @@
+import { Label } from "@/components/ui/label"
+import { Input } from "@/components/ui/input"
+import { toast } from "sonner"
 import {
   Dialog,
   DialogContent,
@@ -6,15 +9,92 @@ import {
   DialogTitle,
   DialogTrigger,
 } from "@/components/ui/dialog"
-import { useState } from "react"
+import {
+  Select,
+  SelectContent,
+  SelectLabel,
+  SelectGroup,
+  SelectItem,
+  SelectTrigger,
+  SelectValue,
+} from "@/components/ui/select"
+import { useState, useEffect } from "react"
+import { CadastroUsuario } from '../../services/repo'
+import { useMutation } from "react-query"
+import axios from "axios"
 
 export const GetProductModal = () => {
   const [contatoData, setContatoData] = useState({
     nome: '',
-    companhia: '',
+    company: undefined,
+    email: '',
     telefone: '',
-    produto: ''
+    product: ''
   })
+  const [isError, setIsError] = useState(false)
+
+  const isValid = () => contatoData.nome !== '' && contatoData.nome.length > 2
+
+  const handleSubmit = async () => { //* Handler de Envio
+
+    if (isValid) {
+      try {
+        console.log('Enviando: ', contatoData);
+        await axios.post('https://oxx-api.vercel.app/oxx/contatos/', contatoData, {
+          headers: {
+            'api-key': 'xUp2jAz5hQZM#wCsKb',
+          }
+        }).then((data) => {
+          toast(`Contato Enviado`)
+        })
+      } catch (error) {
+        console.error('erro ao enviar contato: ', error)
+      }
+    } else {
+
+      setIsError(true)
+    }
+  }
+
+  const handleChange = (event) => {
+    const { name, value } = event.target;
+    setIsError(false)
+    setContatoData((prevData) => ({
+      ...prevData,
+      [name]: value
+    }));
+  };
+
+  const handleSelect = (value) => {
+    setContatoData({
+      ...contatoData,
+      product: value
+    })
+  }
+
+  useEffect(() => {
+    // Função para formatar o número de telefone
+    const formatarTelefone = (telefone) => {
+      // Remove todos os caracteres não numéricos
+      const numerosApenas = telefone.replace(/\D/g, '');
+
+      // Aplica a formatação correta
+      if (numerosApenas.length === 11) {
+        return `(${numerosApenas.slice(0, 2)})${numerosApenas.slice(2, 7)}-${numerosApenas.slice(7)}`;
+      } else if (numerosApenas.length === 10) {
+        return `(${numerosApenas.slice(0, 2)})${numerosApenas.slice(2, 6)}-${numerosApenas.slice(6)}`;
+      }
+
+      // Retorna o número original se não estiver no formato esperado
+      return telefone;
+    };
+
+    // Atualiza o estado com o número de telefone formatado
+    setContatoData(() => ({
+      ...contatoData,
+      telefone: formatarTelefone(contatoData.telefone)
+    }));
+  }, [contatoData.telefone]);
 
   return (<>
     <Dialog>
@@ -30,18 +110,98 @@ export const GetProductModal = () => {
         </div>
       </DialogTrigger>
 
-      <DialogContent className='border-none bg-[#0e0e1b] text-white'>
+      <DialogContent className='border-none bg-[#0e0e1b88] backdrop-blur text-white'>
         <DialogHeader>
           <DialogTitle >
-            Contratação de Serviçoes Digitais:
+            Solicitação de Desenvolvimento de Aplicativos
           </DialogTitle>
           <DialogDescription>
-            Sites e Aplicativos: 
+            Escolha o tipo de serviço desejado:
           </DialogDescription>
         </DialogHeader>
 
-        <article className="border min-h-[10rem] rounded-lg">
-          
+        <article className="shadow-xl bg-[#3838380e] border-[1px_solid_#0e0e1b] min-h-[30rem] rounded-lg p-10">
+
+          <div className="flex flex-col space-y-5">
+            <div>
+              <Label htmlFor="nome">Nome*</Label>
+              <Input
+                type="text"
+                id="nome"
+                name="nome"
+                value={contatoData.nome}
+                onChange={handleChange}
+                placeholder="Seu Nome"
+                className={`border border-slate-600 ${isError && 'border-red-500 ring-2 ring-red-700'}`}
+                required
+              />
+              <p className="text-xs h-1 mt-1"> {isError && 'Insira um nome válido'} </p>
+            </div>
+
+            {/* <div>
+              <Label htmlFor="companhia">Companhia:</Label>
+              <Input
+                type="text"
+                id="companhia"
+                name="companhia"
+                value={contatoData.company}
+                onChange={handleChange}
+                placeholder="Nome da Companhia"
+                className='border border-slate-600'
+              />
+              <h2> Sem Companhia </h2>
+            </div> */}
+
+            <div>
+              <Label htmlFor="email"> Email* </Label>
+              <Input
+                type="email"
+                id="email"
+                name="email"
+                value={contatoData.email}
+                onChange={handleChange}
+                placeholder="Email"
+                className={`border border-slate-600 ${isError && 'border-red-500 ring-2 ring-red-700'} `}
+                required
+              />
+              <p className="text-xs h-1 mt-1"> {isError && 'Insira um email válido'} </p>
+            </div>
+
+            <div>
+              <Label htmlFor="telefone">Telefone</Label>
+              <Input
+                type="tel"
+                id="telefone"
+                name="telefone"
+                value={contatoData.telefone}
+                onChange={handleChange}
+                placeholder="Seu Número de Telefone"
+                className='border border-slate-600'
+              />
+            </div>
+
+            <div>
+              <Label htmlFor="produto">Produto:</Label>
+
+              <Select name='produto' onValueChange={(value) => handleSelect(value)}>
+                <SelectTrigger className={`w-full ${isError && 'border-red-500 ring-2 ring-red-700'}`}>
+                  <SelectValue placeholder="Tipo de Produto" />
+                </SelectTrigger>
+                <SelectContent className='bg-transparent backdrop-blur-sm text-white'>
+                  <SelectGroup>
+                    <SelectLabel className='text-lg'> Desenvolvimento de Apps </SelectLabel>
+                    <SelectItem value="site"> Site </SelectItem>
+                    <SelectItem value="app"> Aplicativo </SelectItem>
+                    <SelectItem value="site+app"> Site + Aplicativo </SelectItem>
+                  </SelectGroup>
+                </SelectContent>
+              </Select>
+              <p className="text-xs h-1 mt-1"> {isError && 'Selecione um produto'} </p>
+            </div>
+
+            <button onClick={() => handleSubmit()} className="w-full rounded-lg shadow bg-[#1f162b] transition hover:bg-[#2f2142] duration-500 p-3" type="submit">Enviar</button>
+          </div>
+
         </article>
       </DialogContent>
     </Dialog>

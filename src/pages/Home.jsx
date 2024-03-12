@@ -4,12 +4,12 @@ import { Products } from "../content/Products"
 
 export default function Home() {
     return (<>
-        <main className="h-full items-center justify-center min-w-screen min-h-screen bg-[#0e0e1b5e] space-y-10">
+        <main className="h-full items-center justify-center min-w-screen min-h-screen bg-[#0e0e1b5e] ">
             {/* Header Principal */}
             <MainHeader />
 
-            <section className="flex flex-col justify-center items-center space-y-10 w-11/12 max-lg:w-full mx-auto">
-
+            <section className="flex flex-col justify-center items-center space-y-20 w-11/12 max-lg:w-full mx-auto">
+                <div className="h-[1rem]"></div>
                 {/* Segundo Cabeçalho */}
                 <div className="oxx-header w-11/12 max-xl:w-full rounded-full bg-[url('/luxurious_spaceship.jpg')] bg-center backdrop-blur max-sm:h-[10rem] sm:h-[15rem] xl:h-[20rem] 2xl:h-[30rem] shadow-[inset_0_0_1rem_#000]">
                     <figure className="bg-[url('/products_banner.png')] bg-cover min-h-full min-w-full rounded-full "></figure>
@@ -58,7 +58,7 @@ export default function Home() {
                 </section>
 
                 {/* Footer Princial */}
-                <footer className="border min-w-screen w-full h-20 border-slate-800">
+                <footer className="border min-w-screen w-full h-20 border-slate-800 rounded-t-lg">
 
                 </footer>
             </section>

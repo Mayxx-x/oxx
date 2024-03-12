@@ -15,8 +15,8 @@ export const MainHeader = () => {
         window.location.href = '/'
     }
 
-    return (<>
-        <header className="h-20 flex justify-center gap-x-10 max-sm:gap-x-1 items-center border border-slate-800 text-white">
+    return (
+        <header className="fixed z-50 w-full h-[5rem] flex justify-center gap-x-10 max-sm:gap-x-1 items-center shadow-xl bg-[#0e0e1b3f] backdrop-blur-md text-white">
 
             {/* Trigger do modal de contato */}
             <div className="cursor-pointer hover:bg-[#4a4aa838]">
@@ -57,5 +57,5 @@ export const MainHeader = () => {
                 <GetProductModal />
             </div>
         </header>
-    </>)
+    )
 }
