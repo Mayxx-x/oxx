@@ -6,7 +6,11 @@ export const Portfolio = () => {
 
     const { data, isLoading, error } = useQuery('projects', async () => {
         try {
-            const res = await axios.get('https://oxx-api.vercel.app/oxx/projects/');
+            const res = await axios.get('https://oxx-api.vercel.app/oxx/projects/', {
+                headers: {
+                    'api-key': 'xUp2jAz5hQZM#wCsKb',
+                }
+            });
             return res.data; // Acessar apenas os dados da resposta
         } catch (error) {
             throw new Error(`Erro ao obter dados: ${error.message}`);
