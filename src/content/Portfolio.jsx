@@ -6,7 +6,7 @@ export const Portfolio = () => {
 
     const { data, isLoading, error } = useQuery('projects', async () => {
         try {
-            const res = await axios.get('https://oxx-api.vercel.app/oxx/projects/', {
+            const res = await axios.get('https://oxx-three.vercel.app/oxx/projects/', {
                 headers: {
                     'api-key': 'xUp2jAz5hQZM#wCsKb',
                 }
